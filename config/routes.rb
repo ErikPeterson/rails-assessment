@@ -1,6 +1,8 @@
 BasicBlog::Application.routes.draw do
-  resources :comments
-
+  # resources :comments
+  post "/comments" => 'comments#create'
+  patch "/comment/:id" => 'comments#update'
+  get "/comment/:id/edit" => 'comments#edit'
   resources :posts
 
   get "/" => 'posts#index'
