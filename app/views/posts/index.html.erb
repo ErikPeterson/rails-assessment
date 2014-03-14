@@ -1,0 +1,23 @@
+<h1>Listing posts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Content</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <ul>
+    <% @posts.each do |post| %>
+      <li><%= link_to post.title, post %></li>
+    <% end %>
+  </ul>
+
+<br>
+
+<%= link_to 'New Post', new_post_path %>
